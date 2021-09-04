@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="build/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Overpass:wght@300;600&family=Ubuntu:wght@400;500;700&display=swap" rel="stylesheet">
+    <title>Document</title>
+    <style>
+        .active-hamburger {
+            top: 8rem;
+            opacity: 1;
+            transition: all 0.6s;
+        }
+        
+        .remove-hamburger {
+            top: -30rem;
+            opacity: 0;
+            transition: all 0.8s;
+        }
+        
+        .menu-tem {
+            transition: all 0.7s;
+            height: 0;
+            overflow: hidden;
+        }
+        
+        .active-munu-tem {
+            transition: all 0.7s;
+            height: 130px;
+            overflow: hidden;
+        }
+    </style>
+</head>
+
+<body class="h-screen">
+    <!-- hamburger menu -->
+    <div class="hambuger-menu-item  remove-hamburger p-7 px-8 pb-10 absolute top-32 left-2/4 bg-white m-auto w-4/5 transform -translate-x-1/2 rounded-2xl text-lg lg:hidden">
+
+        <div class='flex items-center justify-center py-3 px-10 cursor-pointer hover:bg-red-100 mb-5 transition duration-200'>Product <img src="images/icon-arrow-dark.svg" alt="" class="h-2 ml-2 mt-1"></div>
+        <div class='flex items-center justify-center py-3 px-10 cursor-pointer hover:bg-red-100 mb-5 transition duration-200'>Company <img src="images/icon-arrow-dark.svg" alt="" class="h-2 ml-2 mt-1"></div>
+        <div class='flex items-center justify-center py-3 px-10 cursor-pointer hover:bg-red-100 mb-5 transition duration-200 relative overflow-hidden connect-father'>
+            Connect
+            <img src="images/icon-arrow-dark.svg" alt="" class="h-2 ml-2 mt-1">
+        </div>
+        <ul class="menu-tem text-center connect bg-gray-200 rounded-lg">
+            <li class="hover:bg-gray-100 transition duration-200 px-2 py-2">Contact</li>
+            <li class="hover:bg-gray-100 transition duration-200 px-2 py-2">Newsletter</li>
+            <li class="hover:bg-gray-100 transition duration-200 px-2 py-2">LinkedIn</li>
+        </ul>
+        <hr>
+        <div class="flex flex-col items-center justify-center mt-5">
+            <a href="" class='inline-block w-full text-center py-3 px-10 cursor-pointer mb-3 hover:bg-red-100 mb-5 transition duration-200'>Login</a>
+            <a href="" class='inline-block py-2 px-8 cursor-pointer bg-gradient-to-r from-very-light-red to-light-red font-bold text-white font-overpass rounded-full'>Sign Up</a>
+        </div>
+    </div>
+    <header class="w-full height-30vh background-color-image bg-right rounded-bl-10xl">
+        <!-- navbar -->
+        <nav class="py-14 px-10 lg:py-10 lg:pl-36 lg:pr-24 flex justify-between items-center">
+            <!--large show navbar leftside -->
+            <div class="hidden lg:flex items-center ">
+                <img src="images/logo.svg" alt="" class="mr-7">
+                <a href="" class="py-5 px-10 text-white flex items-center text-sm font-overpass font-bold">
+                    Product
+                    <img src="images/icon-arrow-light.svg"
+                         alt="" class="w-full pl-1.5 h-2">
+                </a>
+                <a href="" class="py-5  px-10 text-white flex items-center text-sm font-overpass font-bold">Company
+                    <img src="images/icon-arrow-light.svg"
+                         alt="" class="w-full pl-1.5 h-2">
+                </a>
+                <a href="" class="py-5 px-10 text-white flex items-center text-sm font-overpass font-bold relative connect group transition-all">Connect
+                    <div class='opacity-0 absolute top-10 bg-white text-black rounded overflow-hidden transition-all duration-300 group-hover:opacity-100'>
+                        <ul>
+                            <li class="py-3 pl-3 pr-5 hover:bg-gray-200">Contact</li>
+                            <li class="py-3 pl-3 pr-5 hover:bg-gray-200">Newsletter</li>
+                            <li class="py-3 pl-3 pr-5 hover:bg-gray-200">LinkedIn</li>
+                        </ul>
+                    </div>
+                    <img src="images/icon-arrow-light.svg"
+                         alt="" class="w-full pl-1.5 h-2">
+                </a>
+            </div>
+            <!--large show navbar rightside -->
+            <div class="hidden lg:block">
+                <a href="" class="text-white py-5 px-10 font-bold">Login</a>
+                <a href="" class="text-red-400 font-bold py-3 px-6 bg-white rounded-full">Sign Up</a>
+            </div>
+            <!--sm-md show mobile logo -->
+            <img src="images/logo.svg" alt="" class="lg:hidden">
+            <!--sm-md show mobile hamburger -->
+            <div class="hambuger-menu flex flex-col items-center cursor-pointer  relative lg:hidden">
+                <span class="w-8 h-1 bg-white mb-2"></span>
+                <span class="w-8 h-1 bg-white mb-2"></span>
+                <span class="w-8 h-1 bg-white"></span>
+            </div>
+        </nav>
+        <!-- title -->
+        <div class="flex flex-col justify-center items-center h-3/5 text-white">
+            <h2 class="text-2xl lg:text-6xl text-bold font-ubuntu mb-6">A modern publishing platform</h2>
+            <p class="font-overpass mb-10 text-sm lg:text-lg">Grow your audience and build your online brand</p>
+            <div>
+                <a href="" class="inline-block font-bold font-ubuntu mr-10 py-3 px-2 rounded-full w-36 text-center bg-white text-red-400 transition-all duration-300 hover:bg-red-300 hover:text-white">Start for Free</a>
+                <a href="" class="inline-block font-bold font-ubuntu bg-transparent py-3 px-2 rounded-full w-36 text-center border-2 border-white transition duration-500 hover:bg-white hover:text-red-400">Learn More</a>
+            </div>
+        </div>
+    </header>
+
+    <!-- future -->
+    <div class="bg-white h-auto pt-20 px-10 lg:pl-28 lg:pb-8 mb-60">
+        <h2 class="font-semibold font-overpass text-center text-2xl lg:text-4xl text-very-dark-blue">Designed for the future</h2>
+        <div class="flex flex-col flex-col-reverse lg:flex-row mt-16">
+            <!-- left -->
+            <div class="w-full lg:w-1/2">
+                <h4 class="text-xl lg:text-2xl font-medium mb-5 text-very-dark-grayish-blue">Introducing an extensible editor</h4>
+                <p class="text-base opacity-80 lg:text-lg">Blogr features an exceedingly intuitive interface which lets you focus on one thing: creating content. The editor supports management of multiple blogs and allows easy manipulation of embeds such as images, videos, and Markdown. Extensibility
+                    with plugins and themes provide easy ways to add functionality or change the looks of a blog.</p>
+                <h4 class="text-xl lg:text-2xl font-medium mb-5 mt-14 text-very-dark-grayish-blue">Robust content management </h4>
+                <p class="text-base opacity-80 mb-3 lg:text-lg">Flexible c ontent management enables users to easily move through posts. Increase the usability of your blog by adding customized categories, sections, format, or flow. With this functionality, you’re in full control.</p>
+            </div>
+            <!-- right -->
+            <div class="w-full lg:w-1/2 relative">
+                <div class='lg:absolute -top-40'>
+                    <img src="images/illustration-editor-desktop.svg" alt="" class="w-full max-w-3xl">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- state -->
+    <div style="background-image: url(images/bg-pattern-circles.svg);" class="h-196 lg:h-96 w-full bg-very-dark-blue flex flex-col lg:flex-row relative rounded-bl-5xl rounded-tr-5xl items-center bg-no-repeat bg-left-bottom">
+        <!-- left -->
+        <div class="w-full h-52 lg:w-2/4">
+            <img src="images/illustration-phones.svg" alt="" class="absolute -top-44 lg:-top-20 lg:left-60 max-w-fit w-96 lg:w-auto lg:max-w-none">
+        </div>
+        <!-- right -->
+        <div class="w-full text-center px-5 pb-14 lg:pb-0 lg:w-2/4 lg:pr-40 lg:static">
+            <h3 class="text-white text-2xl  lg:text-3xl font-overpass font-bold mb-7 ">State of the Art Infrastructure</h3>
+            <p class="text-white text-sm lg:text-lg font-ubuntu"> With reliability and speed in mind, worldwide data centers provide the backbone for ultra-fast connectivity. This ensures your site will load instantly, no matter where your readers are, keeping your site competitive. </p>
+        </div>
+    </div>
+
+    <!-- features -->
+    <div class='flex flex-col p-10 lg:p-0 lg:flex-row mt-20 lg:mt-40 justify-center items-center'>
+        <!-- left -->
+        <div class="w-full lg:w-2/5">
+            <img src="images/illustration-laptop-mobile.svg" alt="" class="w-full">
+        </div>
+        <!-- right -->
+        <div class="w-full lg:w-3/5 lg:pr-40">
+            <h3 class="text-2xl lg:text-3xl text-very-dark-blue font-bold mb-5">Free, open, simple</h3>
+            <p class="leading-7">Blogr is a free and open source application backed by a large community of helpful developers. It supports features such as code syntax highlighting, RSS feeds, social media integration, third-party commenting tools, and works seamlessly with
+                Google Analytics. The architecture is clean and is relatively easy to learn.</p>
+            <h3 class="text-2xl lg:text-3xl text-very-dark-blue font-bold mb-5 mt-10">Powerful tooling</h3>
+            <p class='leading-7'>Batteries included. We built a simple and straightforward CLI tool that makes customization and deployment a breeze, but capable of producing even the most complicated sites.</p>
+        </div>
+    </div>
+    <footer class="relative grid grid-cols-1 text-center lg:grid-cols-4 py-10 pl-28 pr-52 bg-very-dark-black-blue rounded-tr-5xl text-white">
+        <img src="images/logo.svg" alt="" class="m-auto mb-10">
+        <ul>
+            <li class="font-bold mb-6 text-lg">Product</li>
+            <li class='hover:underline cursor-pointer'>Overview</li>
+            <li class='hover:underline cursor-pointer'>Pricing</li>
+            <li class='hover:underline cursor-pointer'>Marketplace</li>
+            <li class='hover:underline cursor-pointer'>Features</li>
+            <li class='hover:underline cursor-pointer'>Integrations</li>
+        </ul>
+        <ul>
+            <li class="font-bold mb-6 text-lg mt-10 lg:mt-0">Company</li>
+            <li class='hover:underline cursor-pointer'>About</li>
+            <li class='hover:underline cursor-pointer'>Team</li>
+            <li class='hover:underline cursor-pointer'>Blog</li>
+            <li class='hover:underline cursor-pointer'>Careers</li>
+        </ul>
+        <ul class="mb-5 lg:mb-0">
+            <li class="font-bold mb-6 text-lg mt-10 lg:mt-0">Company</li>
+            <li class='hover:underline cursor-pointer'>Connect </li>
+            <li class='hover:underline cursor-pointer'>Contact </li>
+            <li class='hover:underline cursor-pointer'>Newsletter </li>
+            <li class='hover:underline cursor-pointer'>LinkedIn</li>
+        </ul>
+        <span class="absolute bottom-0 left-10 text-sm lg:text-base">Challenge by <a href="https://www.frontendmentor.io/?ref=challenge" class="text-purple-200 underline">Frontend Mentor</a>. Coded by <a href="https://github.com/bowbowzai/tailwindcss-blogr_landing_page" class="text-purple-200 underline">jupeng2015@gmail.com</a>.</span>
+    </footer>
+    <script>
+        var isOpenMenu = false;
+        var isOpenMenu1 = false;
+        var hambugerMenu = document.querySelector('.hambuger-menu')
+        var hamburgerMenuItem = document.querySelector('.hambuger-menu-item');
+        var connect = document.querySelector('.connect');
+        var connectFather = document.querySelector('.connect-father');
+        hambugerMenu.onclick = function() {
+            if (isOpenMenu) {
+                hamburgerMenuItem.classList.remove('active-hamburger')
+                hamburgerMenuItem.className += ' remove-hamburger'
+            } else {
+                hamburgerMenuItem.className += ' active-hamburger'
+                hamburgerMenuItem.classList.remove('remove-hamburger')
+            }
+            isOpenMenu = !isOpenMenu
+
+        }
+        connectFather.onclick = function() {
+            if (isOpenMenu1) {
+                connect.classList.remove('active-munu-tem')
+                connect.className += ' menu-tem'
+            } else {
+                connect.className += ' active-munu-tem'
+                connect.classList.remove('menu-tem')
+            }
+            isOpenMenu1 = !isOpenMenu1
+        }
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,36 @@
+@import url('https://fonts.googleapis.com/css2?family=Overpass:wght@300;600&family=Ubuntu:wght@400;500;700&display=swap');
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+@layer utilities {
+    .background-color-image {
+        background: url('/images/bg-pattern-intro.svg') no-repeat left 5% center, linear-gradient(to right, hsl(355, 100%, 74%), hsl(356, 100%, 66%));
+    }
+    .height-30vh {
+        height: 60vh;
+    }
+    .h-196 {
+        height: 35rem;
+    }
+    .h-100-60 {
+        height: 40%;
+    }
+    .rounded-bl-10xl {
+        border-bottom-left-radius: 10rem;
+    }
+    .rounded-bl-5xl {
+        border-bottom-left-radius: 5rem;
+    }
+    .rounded-tr-5xl {
+        border-top-right-radius: 5rem;
+    }
+    .flex-2 {
+        flex: 2;
+    }
+    .min-w-fit {
+        min-width: fit-content;
+    }
+    .mt-25 {
+        margin-top: -55%;
+    }
+}
